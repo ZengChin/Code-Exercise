@@ -2,6 +2,7 @@
 #pragma once
 #include<stdio.h>
 #include<stdlib.h>
+#include<assert.h>
 typedef int SLDataType;
 //静态数据表
 //动态
@@ -19,7 +20,15 @@ void SeqListPrintf(SL* ps);
 //接口函数
 void SeqListInit(SL* ps);
 void SeqListDestory(SL* ps);
+void SeqListCheckCapacity(SL* ps);
 void SeqListPushBack(SL* ps, SLDataType x);
 void SeqListPopBack(SL* ps);
 void SeqListPushFront(SL* ps, SLDataType x);
 void SeqListPopFront(SL* ps);
+
+
+int SeqListFind(SL*ps, SLDataType x);
+//在指定位置插入
+void SeqListInsert(SL* ps, int pos, SLDataType x);
+//删除指定位置
+void SeqListErase(SL* ps, int pos, SLDataType x);
