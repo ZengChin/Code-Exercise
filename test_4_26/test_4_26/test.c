@@ -53,17 +53,23 @@
 void menu()
 {
 	printf("*************************\n");
-	printf("请选择你的操作");
+	printf("请选择你的操作:");
 	printf("1.头插  2.尾插\n");
 	printf("3.尾插  4.尾删\n");
+	printf("0.退出        \n");
 	printf("*************************\n");
-
+	
 
 }
 int main()
 {
 	//TestSeqList1();
 	//TestSeqList2();
+	int i = 0;
+	do {	
+		menu();
+		scanf("%d", &i);
+	} while (i);
 
 	return 0;
 }
