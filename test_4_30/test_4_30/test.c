@@ -18,7 +18,17 @@
 //	printf("%d", sizeof(x));
 //	return 0;
 //}
+void test1()
+{
+	SL* plist = NULL;
+	SListPushBack(&plist, 1);
+	SListPushBack(&plist, 2);
+	SListPushBack(&plist, 3);
+	SListPrintf(plist);
+
+}
 int main()
 {
-
+	test1();
+	return 0;
 }

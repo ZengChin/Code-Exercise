@@ -9,9 +9,9 @@ typedef int SLData;
 typedef struct SList
 {
 	SLData data;
-	SL* next;
+	struct SList* next;
 }SL;
 
 
 void SListPrintf(SL* ps);
-void SListPushBack(SL * ps, int x);
+void SListPushBack(SL ** ps, int x);
