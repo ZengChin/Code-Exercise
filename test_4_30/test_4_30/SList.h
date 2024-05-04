@@ -15,3 +15,7 @@ typedef struct SList
 
 void SListPrintf(SL* ps);
 void SListPushBack(SL ** ps, int x);
+void SListPopBack(SL** ps);
+void SListPopFront(SL** ps);
+void SListPushFront(SL** ps, int x);
+SL* SListFind(SL*ps,int pos);

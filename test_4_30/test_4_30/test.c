@@ -24,8 +24,24 @@ void test1()
 	SListPushBack(&plist, 1);
 	SListPushBack(&plist, 2);
 	SListPushBack(&plist, 3);
-	SListPrintf(plist);
+	SListPushBack(&plist, 4);
+	SListPushBack(&plist, 2);
+	SListPushBack(&plist, 3);
+	SListPushBack(&plist, 3);
+	SListPushBack(&plist, 2);
+	SListPushBack(&plist, 3);
+	SListPushBack(&plist, 3);
 
+	//SListPopBack(&plist);
+	//SListPopFront(&plist);
+
+	//SListPushFront(&plist, -1);
+	//SListPushFront(&plist, -2);
+	//SListPushFront(&plist, -3);
+	//SListPushFront(&plist, -4);
+	SL* pp = SListFind(plist,2);
+
+	SListPrintf(plist);
 }
 int main()
 {
