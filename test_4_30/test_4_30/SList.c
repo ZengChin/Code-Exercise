@@ -63,12 +63,37 @@ void SListPopFront(SL** ps)
 }
 SL* SListFind(SL* ps,int pos)
 {
-	if (ps != NULL)
+	SL* cur = ps;
+	while (cur)
 	{
-
+		if (cur->data == pos)
+		{
+			return cur;
+		}
+		else
+		{
+			cur = cur->next;
+		}
+	}
+	return NULL;
+}
+void SListInsert(SL** ps, SL* pos, int x)
+{
+	SL* newcode = (SL*)malloc(sizeof(SL));
+	newcode->data = x;
+	newcode->next = pos;
+	SL* prev = *ps;
+	if (prev == pos)
+	{
+		*ps = newcode;
 	}
 	else
 	{
-		return NULL;
+		while (prev->next != pos)
+		{
+			prev = prev->next;
+		}
+		prev->next = newcode;
 	}
+
 }

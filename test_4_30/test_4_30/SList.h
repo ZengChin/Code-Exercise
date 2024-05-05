@@ -19,3 +19,4 @@ void SListPopBack(SL** ps);
 void SListPopFront(SL** ps);
 void SListPushFront(SL** ps, int x);
 SL* SListFind(SL*ps,int pos);
+void SListInsert(SL** ps, SL*pos, int x);

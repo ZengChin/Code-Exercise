@@ -29,8 +29,8 @@ void test1()
 	SListPushBack(&plist, 3);
 	SListPushBack(&plist, 3);
 	SListPushBack(&plist, 2);
-	SListPushBack(&plist, 3);
-	SListPushBack(&plist, 3);
+	SListPushBack(&plist, 5);
+	SListPushBack(&plist, 6);
 
 	//SListPopBack(&plist);
 	//SListPopFront(&plist);
@@ -39,8 +39,20 @@ void test1()
 	//SListPushFront(&plist, -2);
 	//SListPushFront(&plist, -3);
 	//SListPushFront(&plist, -4);
-	SL* pp = SListFind(plist,2);
+	//SL* pr = SListFind(plist, 3);
+	//SListPrintf(plist);
+	//while(pr)
+	//{		
+	//	if(pr)
+	//	pr->data = 30;
+	//	printf("%p ", pr);
+	//	pr=SListFind(pr->next, 3);
 
+	//}
+	//SListPrintf(plist);
+
+	SL* pos = SListFind(plist, 6);
+	SListInsert(&plist, pos, 30);
 	SListPrintf(plist);
 }
 int main()
