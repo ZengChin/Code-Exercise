@@ -1,0 +1,10 @@
+﻿  test.c
+D:\game_exe\code exercise\test_5_6\test_5_6\test.c(49,13): warning C4133: “函数”: 从“ListNide **”到“ListNode **”的类型不兼容
+D:\game_exe\code exercise\test_5_6\test_5_6\test.c(50,13): warning C4133: “函数”: 从“ListNide **”到“ListNode **”的类型不兼容
+D:\game_exe\code exercise\test_5_6\test_5_6\test.c(51,13): warning C4133: “函数”: 从“ListNide **”到“ListNode **”的类型不兼容
+D:\game_exe\code exercise\test_5_6\test_5_6\test.c(52,13): warning C4133: “函数”: 从“ListNide **”到“ListNode **”的类型不兼容
+D:\game_exe\code exercise\test_5_6\test_5_6\test.c(53,13): warning C4133: “函数”: 从“ListNide **”到“ListNode **”的类型不兼容
+D:\game_exe\code exercise\test_5_6\test_5_6\test.c(54,13): warning C4133: “函数”: 从“ListNide **”到“ListNode **”的类型不兼容
+D:\game_exe\code exercise\test_5_6\test_5_6\test.c(55,13): warning C4133: “函数”: 从“ListNide **”到“ListNode **”的类型不兼容
+D:\game_exe\code exercise\test_5_6\test_5_6\test.c(56,12): warning C4133: “函数”: 从“ListNide *”到“ListNode *”的类型不兼容
+  test_5_6.vcxproj -> D:\game_exe\code exercise\test_5_6\x64\Debug\test_5_6.exe
