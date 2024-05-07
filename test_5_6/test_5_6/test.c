@@ -10,18 +10,44 @@
 struct ListNode* removeElements(struct ListNode* head, int val)
 {
 	struct ListNode* cur = head;
-	if (cur == NULL)
+	struct ListNode* prev = NULL;
+	if (head == NULL)
 	{
 		return NULL;
 	}
 	else
 	{
-		while (head->data == val)
+		prev = head;
+		while(head)
 		{
-			
+			if (head->data == val)
+			{
+				if (head == cur)
+				{
+					cur = head->next;
+					free(prev);
+					head = cur;
+					prev = head;
+
+				}
+				else
+				{
+					prev->next = head->next;
+					free(head);
+					head = prev->next;
+				}
+			}
+			else
+			{
+				prev = head;
+				head = head->next;
+
+			}
+
 		}
-		head = head->next;
+		return cur;
 	}
+
 }
 void createNode(struct ListNode**ps,int x)
 {
@@ -54,18 +80,36 @@ void codeprint(struct ListNode* ps)
 		printf("%d ", ps->data);
 		ps = ps->next;
 	}
+	printf("\n");
+}
+void SLdestory(struct ListNode** cur)
+{
+	struct ListNode* next = NULL;
+	struct ListNode* head = *cur;
+
+	while (head)
+	{
+		next = head->next;
+		free(head);
+		head = NULL;
+		head = next;
+
+	}
+	*cur = NULL;
 }
 int main()
 {
-	struct ListNide* plist = NULL;
-	createNode(&plist, 1);
+	struct ListNode* plist = NULL;
+	createNode(&plist, 6);
 	createNode(&plist, 2);
 	createNode(&plist, 6);
 	createNode(&plist, 3);
 	createNode(&plist, 4);
 	createNode(&plist, 1);
 	createNode(&plist,6);
-	codeprint(plist);
-	//removeElements(plist, 6);
-	
+	/*codeprint(plist);
+	struct ListNode* try=removeElements(plist, 6);
+	codeprint(try);*/
+	SLdestory(&plist);
+	return 0;	
 }
